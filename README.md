@@ -1,1 +1,6 @@
 # conan-QtWebApp
+| OS | Status |
+|---|---|
+| Linux | [![Build Status](https://dev.azure.com/bjoernstresing/bjoernstresing/_apis/build/status/Tereius.conan-QtWebApp?repoName=Tereius%2Fconan-QtWebApp&branchName=master&jobName=Linux)](https://dev.azure.com/bjoernstresing/bjoernstresing/_build/latest?definitionId=18&repoName=Tereius%2Fconan-QtWebApp&branchName=master) |
+| Windows | [![Build Status](https://dev.azure.com/bjoernstresing/bjoernstresing/_apis/build/status/Tereius.conan-QtWebApp?repoName=Tereius%2Fconan-QtWebApp&branchName=master&jobName=Windows)](https://dev.azure.com/bjoernstresing/bjoernstresing/_build/latest?definitionId=18&repoName=Tereius%2Fconan-QtWebApp&branchName=master) |
+| Macos | [![Build Status](https://dev.azure.com/bjoernstresing/bjoernstresing/_apis/build/status/Tereius.conan-QtWebApp?repoName=Tereius%2Fconan-QtWebApp&branchName=master&jobName=Macos)](https://dev.azure.com/bjoernstresing/bjoernstresing/_build/latest?definitionId=18&repoName=Tereius%2Fconan-QtWebApp&branchName=master) |

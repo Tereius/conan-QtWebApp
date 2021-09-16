@@ -28,6 +28,8 @@ class QtWebAppConan(ConanFile):
 
     def build(self):
 
+        tools.replace_in_file("QtWebApp/QtWebApp/QtWebApp.pro", "QMAKE_MAC_SDK = macosx10.10", "QMAKE_MAC_SDK = macosx%s" % self.settings.os.version)
+
         with tools.environment_append({"PATH": self.deps_cpp_info["Qt"].bin_paths}):
             if self.settings.compiler == "Visual Studio":
                 env_build = VisualStudioBuildEnvironment(self)
@@ -49,7 +51,6 @@ class QtWebAppConan(ConanFile):
     def package(self):
 
         build_type = "debug" if self.settings.build_type == "Debug" else "release"
-        arch = "*"
         if self.settings.compiler == "Visual Studio":
             self.copy("QtWebApp/QtWebApp/" + build_type + "*.lib", dst="lib", keep_path=False)
             self.copy("QtWebApp/QtWebApp/" + build_type + "*.dll", dst="lib", keep_path=False)
