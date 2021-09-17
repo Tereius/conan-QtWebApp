@@ -56,6 +56,7 @@ class QtWebAppConan(ConanFile):
             self.copy("QtWebApp/QtWebApp/" + build_type + "*.lib", dst="lib", keep_path=False)
             self.copy("QtWebApp/QtWebApp/" + build_type + "*.dll", dst="lib", keep_path=False)
         else:
+            self.copy("QtWebApp/QtWebApp/*.dylib*", dst="lib", keep_path=False, symlinks=True)
             self.copy("QtWebApp/QtWebApp/*.so*", dst="lib", keep_path=False, symlinks=True)
         self.copy("QtWebApp/QtWebApp/httpserver/*.h", dst="include/httpserver", keep_path=False)
         self.copy("QtWebApp/QtWebApp/logging/*.h", dst="include/logging", keep_path=False)
